@@ -27,8 +27,10 @@ def quadradoString(word, word_height):
             while a < word_height:
                 a = len(word) + len(word)
                 word += word
-            a = word_height - len(word)
-            print(word[:a])
+                a = word_height - len(word)
+                print(word[:a])
+                word = word[word_height:] + word
+                
 
 quadradoString(word, word_height)
 
