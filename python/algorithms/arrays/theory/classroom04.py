@@ -8,9 +8,7 @@ while True:
     answer = int(input("To add an item to the list, type 1, to remove an item from the list, type 2: "))
 
     if answer == 1:
-        new_value = int(input("Enter the new value: "))
-        list.append(new_value)
+        list.append(list[-1] + 1)
     elif answer == 2:
-        remove_value = int(input("Enter the value to remove: "))
-        list.remove(remove_value)
+        list.pop(len(list - 1))
     print(list)
