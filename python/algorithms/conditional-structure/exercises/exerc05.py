@@ -1,14 +1,15 @@
 #
-# Escreva um programa onde você armazena 4 valores de variáveis (nome, cidade, estado e cep) e peça para o usuário escrever um nome no input. Se o nome for igual ao definido na variável, ele exibirá osdados das outras variáveis. Se for diferente, exiba a mensagem ("esse usuário não existe em nossa bases de dados")
+# Escreva um programa que solicite ao usuário um núero inteiro. O programa deve então imprimir a magnitude do número de acordo com os exemplos a seguir. 
 #
-name = "Chrystopher"
-city = "Curitiba"
-state = "Paraná"
-cep = "81130-260"
+number = int(input("enter a number: "))
 
-name_user = input("Enter a name: ")
-
-if name_user == name:
-    print(f"Name: {name}\nCity: {city}\nState: {state}\nCEP: {cep}")
+if number < 1000 and number >= 100:
+    print("This number is less than 1000, thank you!")
+elif number < 100 and number >= 10:
+    print("This number is less than 1000 and lessa than 100, thank you!")
+elif number < 10:
+    print("This number is less than 1000 and lessa than 100 and less than 10, thank you!")
 else:
-    print("This user does not exist in our database.")
+    print("Thank you!")
+
+

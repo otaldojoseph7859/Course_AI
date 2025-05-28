@@ -1,10 +1,36 @@
 #
-# Escreva um programa que solicite ao usuário uma temperatura em graus Fahrenheit e depois imprima a mesma em graus Celsius. Se a temperatura convertida cair abaixo de zero graus Celsius, o programa também deverá imprimir "Brr! Está frio aqui". A fórmula para converter graus Fahrenheit em graus Celsius pode ser fcilmente encontrada em qualquer mecanismo de busca de sua escolha.
+# Escreva um programa que solicite ao usuário dois números e uma operação. Se a operação for adicionar, multiplicar ou subtrair, o programa deverá calcular e imprimir o resultado da operação com os números fornecidos. Se o usuário digitar qualquer outra coisa, o programa não deverá imprimir nada.
 #
-fahrenheit = float(input("Enter temperature in Fahrenheit: "))
-celsius = (fahrenheit - 32) * 1.8
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+operation = input("Enter operation (+, -, /, *, **, %, //): ")
 
-if celsius < 0:
-    print("Freezing point")
+if operation == "+":
+    result = number1 + number2
+    print(f"The result of {number1} + {number2} is: {result}")
+elif operation == "-":
+    result = number1 - number2
+    print(f"The result of {number1} - {number2} is: {result}")
+elif operation == "*":
+    result = number1 * number2
+    print(f"The result of {number1} * {number2} is: {result}")
+elif operation == "/":
+    if number2 != 0:
+        result = number1 / number2
+        print(f"The result of {number1} / {number2} is: {result}")
+    else:
+        print("Division by zero is not allowed.")
+elif operation == "**":
+    result = number1 ** number2
+    print(f"The result of {number1} ** {number2} is: {result}")
+elif operation == "%":
+    result = number1 % number2
+    print(f"The result of {number1} % {number2} is: {result}")
+elif operation == "//":
+    if number2 != 0:
+        result = number1 // number2
+        print(f"The result of {number1} // {number2} is: {result}")
+    else:
+        print("Division by zero is not allowed.")
 else:
-    print("Not freezing point")
+    print("Invalid operation. No result to display.")

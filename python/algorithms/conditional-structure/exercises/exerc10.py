@@ -1,23 +1,9 @@
 #
-# 24
+# Este programa calcula o bônus de final de ano que um cliente recebe em seu cartão fidelidade. O bônus é calculado com a seguinte formula: 1 - se houver menos de cem pontos no cartão, o bônus é de 10%, 2 - Em qualquer outro caso o bônus é de 15%.
 #
-temperature = int(input("Enter the temperature: "))
-storm = int(input("Is there a storm? [1 - yes][2 - no] "))
+points = int(input("Enter the number of points: "))
 
-if temperature > 20:
-    if storm == 1:
-        print("Good weather. Wear pants and a t-shirt.")
-    else:
-        print("Good weather. Wear pants and a t-shirt. Bring an umbrella.")
-elif temperature >= 10 and temperature <= 20:
-    if storm == 1:
-        print("Attention! Cold and rainy weather. Wear pants, a shirt and bring a jacket.")
-    else:
-        print("Attention! Cold and rainy weather. Wear pants, shirt and coat.")
-elif temperature >= 5 and temperature < 10:
-    if storm == 1:
-        print("Warning! Very freezeing weather. Use a coat and a hat")
-    else:
-        print("Warning! Very cold and rainy weather. Wear a coat and hat.")
+if points < 100:
+    print("10% bonus")
 else:
-    print("Warning! Very cold weather. Stay at home.")
+    print("15% bonus")

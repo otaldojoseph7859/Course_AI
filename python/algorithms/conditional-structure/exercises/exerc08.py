@@ -1,12 +1,10 @@
 #
-# Escreva um programa que solicite o salário por hora, as horas trabalhadas e o dia da semana. O programa deverá então imprimir o salário diário, que é igual ao salário por hora multiplicado pelas horas trabalhadas, exceto aos domingos, quando o salário por hora é duplicado.
+# Escreva um programa que solicite ao usuário uma temperatura em graus Fahrenheit e depois imprima a mesma em graus Celsius. Se a temperatura convertida cair abaixo de zero graus Celsius, o programa também deverá imprimir "Brr! Está frio aqui". A fórmula para converter graus Fahrenheit em graus Celsius pode ser fcilmente encontrada em qualquer mecanismo de busca de sua escolha.
 #
-hour_salary = float(input("Enter the hourly salary: "))
-hours_worked = float(input("Enter the number of hours worked: "))
-day_week = input("Enter the day of the week : ")
+fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+celsius = (fahrenheit - 32) * 1.8
 
-if day_week == "Sunday":
-    day_salary = (hour_salary * 2) * hours_worked
+if celsius < 0:
+    print("Freezing point")
 else:
-    day_salary = hour_salary * hours_worked
-print(f"The salary is: $ {day_salary:.2f}")
+    print("Not freezing point")

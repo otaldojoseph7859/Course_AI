@@ -1,10 +1,10 @@
 #
-# Pro favor, escreva um programa que solicite o nome de usuário. Se o nome não for "Jerry", o programa solicita o número de porções e imprime o custo total. O preço da porção é 5,90.
+# Escreva um programa que solicite ao usuário um número inteiro. Se o número for menor que zero, o programa deverá imprimir o número multiplicado por -1. Caso contrário, o programa imprime o número como está.
 #
-name = input("Enter your name: ")
-if name != "Jerry":
-    portions = int(input("Enter the number of portions: "))
-    cost = portions * 5.90
-    print(f"The total cost is: ${cost:.2f}")
+number = int(input("Enter a integer number: "))
+
+if number < 0:
+    result = number * (-1)
+    print(result)
 else:
-    print("Access denied for Jerry.")
+    print(number)
