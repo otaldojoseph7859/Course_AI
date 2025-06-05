@@ -1,11 +1,11 @@
 #
-# Verifique a média de duas notas de um aluno. Verifique se a média é maior ou igual a 7. Se for, exiba a mensagem "Aprovado", caso contrário, exiba a mensagem "Reprovado".
+# Crie um programa em Python que verifique a categoria de um produto. Verifique em qual categoria o produto se enquadra. Se o preço for menor ou igual a R$ 50,00, exiba a mensagem "Categoria Econômica". Se for maior que R$ 50,00 e menor ou igual a R$ 100,00, exiba a mensagem "Categoria Intermediária". Caso contrario, exiba a mensagem "Categoria Premium".
 #
-note1 = float(input("Enter the first note: "))
-note2 = float(input("Enter the secound note: "))
-average = (note1 + note2) / 2
+price = float(input("Enter the product price: "))
 
-if average > 7:
-    print("You are approved with successes!")
+if price <= 50.00:
+    print("Economic Category")
+elif price > 50.00 and price <= 100.00:
+    print("Intermediate Category")
 else:
-    print("You are reproved!")
+    print("Premium Category")
